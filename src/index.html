@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<link rel="stylesheet" href="css/preloader.css">
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/global.css">
+	<link rel='stylesheet' href='css/index.css'>
+
+	<title>Home</title>
+</head>
+
+<body>
+	
+	@include('html/preloader.html')
+	<div class="page-wrapper">
+		@include('html/sidebar.html')
+		@include('html/header.html')
+		<div class="content">
+			@include('html/grid.html')
+			@include('html/settings.html')
+		</div>
+	</div>
+
+	<div class="modal">
+		<div class="modal__container" role="dialog" aria-modal="true" data-graph-target="opened-card">
+			<div class="modal-content">
+				@include('html/opened-card.html')
+			</div>
+		</div>
+	</div>
+
+	<script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

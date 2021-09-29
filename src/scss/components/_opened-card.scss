@@ -1,0 +1,176 @@
+.opened-card {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    position: relative;
+    min-height: 80vh;
+
+    background-color: var(--color-bg-form);
+
+    @media (min-width: 992px) {
+        padding: 30px 15px;
+    }
+
+    @media (max-width: 991px) and (min-width: 320px) {
+        padding: calc(20px + (30 - 20) * ((100vw - 320px) / (991 - 320))) calc(8px + (15 - 8) * ((100vw - 320px) / (991 - 320)));
+    }
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    &._editing {
+
+        .opened-card__title,
+        .opened-card__descr {
+            background-color: var(--color-bg-field);
+        }
+
+        .opened-card__edit {
+            svg {
+                fill: var(--color-accent);
+                filter: drop-shadow(0px 4px 15px var(--color-accent));
+            }
+        }
+    }
+
+    &__title {
+        background-color: var(--color-bg-form);
+        border-radius: 20px;
+
+        color: var(--color-title);
+
+        resize: none;
+        font-family: var(--ff);
+        font-weight: 700;
+        width: 100%;
+        padding: 10px 15px;
+
+        transition: background-color var(--trns),
+            border-color var(--trns);
+
+        @media (min-width: 992px) {
+            font-size: 40px;
+        }
+
+        @media (max-width: 991px) and (min-width: 320px) {
+            font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (991 - 320)));
+        }
+
+    }
+
+    &__descr {
+        margin-top: 15px;
+
+        width: 100%;
+        background-color: var(--color-bg-form);
+
+        font-family: var(--ff);
+        line-height: 35px / 25px * 100%;
+        font-weight: 400;
+        border-radius: 20px;
+        resize: none;
+        padding: 10px 15px;
+
+        color: var(--color-descr);
+
+        transition: background-color var(--trns),
+            border-color var(--trns);
+
+        @media (min-width: 992px) {
+            font-size: 25px;
+        }
+
+        @media (max-width: 991px) and (min-width: 320px) {
+            font-size: calc(16px + (25 - 16) * ((100vw - 320px) / (991 - 320)));
+        }
+
+        overflow-y: auto;
+    }
+
+    &__descr::-webkit-scrollbar {
+
+        @media (min-width: 501px) {
+            width: 12px;
+        }
+
+        @media (max-width: 500px) {
+            width: 0;
+        }
+    }
+
+    &__descr::-webkit-scrollbar-track {
+        background-color: var(--scroll-bg);
+        transition: background-color var(--trns);
+    }
+
+    &__descr::-webkit-scrollbar-thumb {
+        background-color: var(--scroll-handle-bg);
+        border-radius: 20px;
+        border: 3px solid var(--scroll-bg);
+        transition: background-color var(--trns),
+            border var(--trns);
+    }
+
+    &__bottom {
+        display: flex;
+
+        @media (min-width: 768px) {
+            margin-top: 25px;
+        }
+
+        @media (max-width: 767px) {
+            margin-top: 10px;
+        }
+    }
+
+    &__birth {
+        font-weight: 300;
+        color: var(--color-birth);
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        transition: color var(--trns);
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: 20px;
+        width: 100%;
+
+        button {
+            display: grid;
+			place-items: center;
+
+            svg {
+                height: 100%;
+            }
+        }
+    }
+
+    &__delete,
+    &__edit {
+        transition: border-color var(--trns);
+        padding: 10px;
+		border-radius: 5px;
+
+        svg {
+            fill: var(--color-title);
+
+            transition: fill var(--trns),
+                filter var(--trns)
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                svg {
+                    fill: var(--color-accent);
+                    filter: drop-shadow(0px 4px 15px var(--color-accent));
+                }
+            }
+        }
+    }
+
+}

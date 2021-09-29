@@ -1,0 +1,20 @@
+:root {
+    --color-bg: hsl(215, 70%, 10%);
+    --color-bg-form: hsl(215, 70%, 15%);
+    --color-bs: hsla(200, 70%, 10%, 0.5);
+    --color-title: hsl(0, 0%, 100%);
+    --color-descr: hsl(0, 0%, 75%);
+    --color-birth: hsl(0, 0%, 65%);
+    --color-bs-btn: hsla(220, 100%, 50%, 0.2);
+    --color-border-card: hsl(220, 80%, 10%);
+    --color-bg-field: hsl(215, 70%, 25%);
+    --link: #00FF57;
+    --invalid: #ff6868;
+    --valid: #68ff95;
+
+    // SWITCH
+    --color-switch: hsl(0, 0%, 100%);
+    --color-switch-highlight: hsl(0 0% 70% / 25%);
+    --color-track-inactive: hsl(231, 32%, 32%);
+    --color-track-active: hsl(160, 82%, 33%);
+}

@@ -1,0 +1,86 @@
+{
+	"name": "notfie-app",
+	"productName": "Notfie",
+	"version": "1.0.0",
+	"description": "Note App",
+	"main": "bundle/index.js",
+	"scripts": {
+		"start": "electron-forge start",
+		"package": "electron-forge package",
+		"make": "electron-forge make",
+		"publish": "electron-forge publish",
+		"lint": "echo \"No linting configured\""
+	},
+	"keywords": [],
+	"author": {
+		"name": "pink-eye"
+	},
+	"license": "MIT",
+	"config": {
+		"forge": {
+			"packagerConfig": {
+				"name": "Notfie",
+				"icon": "./bundle/assets/icons/icon"
+			},
+			"makers": [
+				{
+					"name": "@electron-forge/maker-squirrel",
+					"config": {
+						"name": "Notfie",
+						"loadingGif": "./bundle/assets/loading.gif"
+					}
+				},
+				{
+					"name": "@electron-forge/maker-zip",
+					"platforms": [
+						"darwin"
+					]
+				},
+				{
+					"name": "@electron-forge/maker-deb",
+					"config": {}
+				},
+				{
+					"name": "@electron-forge/maker-rpm",
+					"config": {}
+				}
+			]
+		}
+	},
+	"dependencies": {
+		"auto-launch": "^5.0.5",
+		"electron-squirrel-startup": "^1.0.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.15.5",
+		"@babel/preset-env": "^7.15.6",
+		"@electron-forge/cli": "^6.0.0-beta.61",
+		"@electron-forge/maker-deb": "^6.0.0-beta.61",
+		"@electron-forge/maker-rpm": "^6.0.0-beta.61",
+		"@electron-forge/maker-squirrel": "^6.0.0-beta.61",
+		"@electron-forge/maker-zip": "^6.0.0-beta.61",
+		"babel-loader": "^8.2.2",
+		"browser-sync": "^2.27.5",
+		"del": "^6.0.0",
+		"electron": "15.0.0",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^8.0.0",
+		"gulp-babel": "^8.0.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-cli": "^2.3.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-file-include": "^2.3.0",
+		"gulp-htmlmin": "^5.0.1",
+		"gulp-if": "^3.0.0",
+		"gulp-image": "^6.2.1",
+		"gulp-notify": "^4.0.0",
+		"gulp-rev": "^9.0.0",
+		"gulp-rev-delete-original": "^0.2.3",
+		"gulp-rev-rewrite": "^5.0.0",
+		"gulp-sass": "^5.0.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-svg-sprite": "^1.5.0",
+		"gulp-uglify-es": "^3.0.0",
+		"node-sass": "^6.0.1"
+	}
+}

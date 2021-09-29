@@ -1,0 +1,64 @@
+@import './components/header';
+@import './components/grid';
+@import './components/footer';
+@import './components/card';
+@import './components/search';
+@import './components/sidebar';
+@import './components/settings';
+@import './components/dropdown';
+@import './components/opened-card';
+@import './components/switch';
+@import './components/burger';
+
+
+.page-wrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.content {
+    position: relative;
+    overflow-x: hidden;
+
+    @media (min-width: 768px) {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+    }
+}
+
+._container {
+    padding-inline: 15px;
+}
+
+.tab-content {
+    background-color: var(--color-bg);
+    min-height: 100vh;
+    transition: background-color var(--trns);
+
+    padding-block: 20px;
+
+    &:not(._active) {
+        display: none;
+    }
+}
+
+.header-shell {
+    --header-height: 0px;
+    width: 100%;
+    height: var(--header-height);
+    padding-inline: 30px;
+
+    &__title {
+        @media (min-width: 768px) {
+            display: none;
+        }
+
+        font-size: 50px;
+        font-weight: 700;
+
+        color: var(--color-title);
+
+        transition: color var(--trns);
+
+    }
+}
