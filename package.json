@@ -27,7 +27,8 @@
 					"name": "@electron-forge/maker-squirrel",
 					"config": {
 						"name": "Notfie",
-						"loadingGif": "./bundle/assets/loading.gif"
+						"loadingGif": "./bundle/assets/loading.gif",
+						"iconUrl": "https://raw.githubusercontent.com/pink-eye/Notfie/main/src/res/assets/icons/icon.ico"
 					}
 				},
 				{
