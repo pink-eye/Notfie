@@ -116,12 +116,12 @@
     &:not(:focus-visible) {
         background-color: transparent;
     }
-	
+
     @media (hover: hover) and (pointer: fine) {
-		
+
 		&:hover,
         &:focus-visible {
-			background-color: var(--color-accent-light);
+				background-color: var(--color-accent-light);
 		}
-    }
+  		  }
 }

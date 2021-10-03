@@ -18,6 +18,9 @@
 * Navigate the app using the keyboard
 * Responsive layout (it means the app looks good on each device)
 
+## Issues
+Feel free to open an issue for suggestions or any unexpected behavior encountered.
+
 ## License
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
