@@ -79,7 +79,7 @@ const images = _ => {
 		'./src/img/**/*.png',
 		'./src/img/**/*.jpeg',
 	])
-		.pipe(gulpif(isProd, image()))
+		// .pipe(gulpif(isProd, image()))
 		.pipe(dest('./bundle/img'))
 		.pipe(browserSync.stream());
 };
