@@ -67,12 +67,6 @@ const saveOpenedCard = id => {
 					let cardID = card.querySelector('.card__id')
 
 					if (id === cardID.textContent) {
-
-						console.log(cardTitle.textContent);
-						console.log(newCardTitle);
-						console.log(cardDescr.innerHTML);
-						console.log(newCardDescr);
-
 						if (cardTitle.textContent !== newCardTitle
 							|| cardDescr.innerHTML !== newCardDescr) {
 							cardTitle.textContent = newCardTitle;
